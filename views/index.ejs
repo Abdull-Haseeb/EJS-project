@@ -1,0 +1,19 @@
+<!-- views/home.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= pageTitle %></title>
+  </head>
+  <body>
+    <h1>Welcome to <%= pageTitle %></h1>
+    <ul class="post-list">
+      <% posts.forEach((post) => { %>
+      <li class="post-item">
+        <h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3>
+        <p><%= post.body %></p>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
